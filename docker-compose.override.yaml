@@ -17,15 +17,15 @@ services:
     devices:
       - /dev/ttyACM0:/dev/ttymxc3
 
-  webcam:
-    <<: *ustreamer-svc
-    container_name: webcam
-    devices:
-      - /dev/video0:/dev/webcam
-    labels:
-      - "traefik.enable=true"
-      - "traefik.http.services.webcam.loadbalancer.server.port=8080"
-      - "traefik.http.routers.webcam.rule=PathPrefix(`/webcam`)"
-      - "traefik.http.routers.webcam.entrypoints=web"
-      - "traefik.http.middlewares.webcam.stripprefix.prefixes=/webcam"
-      - "traefik.http.routers.webcam.middlewares=webcam"
+  # webcam:
+  #   <<: *ustreamer-svc
+  #   container_name: webcam
+  #   devices:
+  #     - /dev/video0:/dev/webcam
+  #   labels:
+  #     - "traefik.enable=true"
+  #     - "traefik.http.services.webcam.loadbalancer.server.port=8080"
+  #     - "traefik.http.routers.webcam.rule=PathPrefix(`/webcam`)"
+  #     - "traefik.http.routers.webcam.entrypoints=web"
+  #     - "traefik.http.middlewares.webcam.stripprefix.prefixes=/webcam"
+  #     - "traefik.http.routers.webcam.middlewares=webcam"
