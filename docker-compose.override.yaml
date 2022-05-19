@@ -17,6 +17,19 @@ services:
     devices:
       - /dev/ttyACM0:/dev/ttymxc3
 
+code-server:
+  image: lscr.io/linuxserver/code-server:lastest
+  container_name: code-server
+  environment:
+    - PUID=1000
+    - PGID=1000
+    - TZ=Europe/Warsaw
+  volumes:
+    - ./config:/config
+  ports:
+    - 8443:8443
+  restart: unless-stopped
+
   # webcam:
   #   <<: *ustreamer-svc
   #   container_name: webcam
