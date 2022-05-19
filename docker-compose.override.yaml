@@ -15,7 +15,7 @@ x-ustreamer-svc: &ustreamer-svc
 services:
   klipper:
     devices:
-      - /dev/ttymxc3:/dev/ttymxc3
+      - /dev/ttyACM0:/dev/ttymxc3
 
   webcam:
     <<: *ustreamer-svc
