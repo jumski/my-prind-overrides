@@ -17,9 +17,9 @@ services:
     devices:
       - /dev/ttyACM0:/dev/ttymxc3
 
-code-server:
+vscode:
   image: lscr.io/linuxserver/code-server:lastest
-  container_name: code-server
+  container_name: vscode
   environment:
     - PUID=1000
     - PGID=1000
