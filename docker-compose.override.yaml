@@ -24,6 +24,7 @@ services:
       - PUID=1000
       - PGID=1000
       - TZ=Europe/Warsaw
+      - DEFAULT_WORKSPACE=/prind-config/
     volumes:
       - ./vscode-config:/config
       - ./config:/prind-config
