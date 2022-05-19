@@ -25,7 +25,8 @@ services:
       - PGID=1000
       - TZ=Europe/Warsaw
     volumes:
-      - ./config:/klipper-config
+      - ./vscode-config:/config
+      - ./config:/prind-config
     ports:
       - 8443:8443
     restart: unless-stopped
