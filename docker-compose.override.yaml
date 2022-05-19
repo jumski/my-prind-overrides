@@ -18,14 +18,14 @@ services:
       - /dev/ttyACM0:/dev/ttymxc3
 
   vscode:
-    image: linuxserver/code-server:lastest
+    image: linuxserver/code-server
     container_name: vscode
     environment:
       - PUID=1000
       - PGID=1000
       - TZ=Europe/Warsaw
     volumes:
-      - ./config:/config
+      - ./config:/klipper-config
     ports:
       - 8443:8443
     restart: unless-stopped
