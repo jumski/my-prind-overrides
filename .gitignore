@@ -3,3 +3,4 @@ klippy-env
 out
 *.bkp
 vscode-config/
+config/printer-2*.cfg
