@@ -12,7 +12,10 @@ x-ustreamer-svc: &ustreamer-svc
     - "--desired-fps=30"
 
 volumes:
-  gcode: /opt/sdcard/gcode
+  gcode:
+    driver_opts:
+      device: ':/opt/sdcard/gcode'
+
 
 ## Add your personal config here
 services:
