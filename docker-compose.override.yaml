@@ -11,6 +11,9 @@ x-ustreamer-svc: &ustreamer-svc
     - "--format=MJPEG"
     - "--desired-fps=30"
 
+volumes:
+  gcode: /opt/sdcard/gcode
+
 ## Add your personal config here
 services:
   klipper:
