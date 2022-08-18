@@ -23,7 +23,7 @@ services:
       - "run/klipper.tty"
       - "-a"
       - "run/klipper.sock"
-      - "cfg/printer.override.cfg"
+      - "cfg/custom-config/printer.cfg"
       - "-l"
       - "log/klippy.log"
 
