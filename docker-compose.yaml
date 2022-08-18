@@ -179,7 +179,7 @@ volumes:
     driver_opts:
       type: tmpfs
       device: tmpfs
-  # gcode:
+  gcode:
   octoprint:
   moonraker-db:
   log:

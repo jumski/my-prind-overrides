@@ -13,8 +13,10 @@ x-ustreamer-svc: &ustreamer-svc
 
 volumes:
   gcode:
+    driver: local
     driver_opts:
-      device: ':/opt/sdcard/gcode'
+      type: ext4
+      device: /dev/sda1
 
 
 ## Add your personal config here
